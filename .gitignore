@@ -1,4 +1,4 @@
 output/
-.vsconde/
+.vscode/
 *.exe
 *.code-workspace
