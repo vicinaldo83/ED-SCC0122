@@ -1,0 +1,155 @@
+<style>
+    table {
+        margin: 10px 20px 10px 10px;
+        border-collapse: collapse;
+    }
+
+    thead, tbody {
+        margin-bottom: 10px;
+    }
+
+    td, th {
+        padding: 10px 5px 10px 5px;
+        margin: 0;
+        text-align: justify;
+        border-bottom: 2px solid #aaa;
+    }
+
+    .container {
+        border-bottom: 2px solid #222;
+    }
+</style>
+
+<div class="container">
+    <h1>Tipo Abstrato de Dado (TAD)</h1>
+
+    <p>
+        Conceito parecido com a idea de classes onde há um encapsulamento de informações e operações específicas com as
+        mesmas
+    </p>
+    <p>
+        Util para criar tipo específicos de dados para serem re-utilizados dentro de diversos programas.
+    </p>
+
+    <h3>Ordem de verificação para criação de um TAD:</h3>
+    <u>
+        <li>Mundo real: Qual é o objeto prncipal</li>
+        <li>Informação: O que vamos tirar do mundo real</li>
+        <li>Tipo: Tipo de dados efetivamente dentro do computador </li>
+        <li>Operações: Operações definidads para seu topo de dado personalizado </li>
+    </u>
+
+    <h3>Observações:</h3>
+    <p>
+        Definir uma especificação com foco em desempenho, eficiência ou facilidade.
+    </p>
+</div>
+
+<div class="container exercicio">
+    <h1>Ex.: Fazer um sistema de agenda de endereços</h1>
+    <ul style="list-style-type: decimal">
+        <li>
+            Especificações do TAD
+            <ul style="list-style-type:lower-latin;">
+                <li>Dados / Informações</li>
+                <li>Operações</li>
+            </ul>
+        </li>
+        <li>
+            Implementação
+            <ul style="list-style-type:lower-latin;">
+                <li>Representação</li>
+                <li>Código</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>
+        Para um agenda, seria necessário as seguintes informações: Id, Nome da pessoa, *telefone.
+    </p>
+    <p>
+        Operações básicas: Adicionar pessoa, remover pessoas, query ID, query Nome, query Telefone (talvez para
+        uma pesquisa por estado, número fixos ou celular, etc), update Numero
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do dado</th>
+                <th>Tipo do dado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Nome da pessoa</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Id da pessoas</td>
+                <td>Long</td>
+            </tr>
+            <tr>
+                <td>Telefone</td>
+                <td>DDD - Int[2] / Numero - Int[9] </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Operação</th>
+                <th>Descrição</th>
+                <th>Parâmetros</th>
+                <th>Retorno</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adicionar pessoa</td>
+                <td>Adiciona uma pessoa a agenda</td>
+                <td>id</td>
+                <td>boolean</td>
+            </tr>
+            <tr>
+                <td>Remover pessoa</td>
+                <td>Remove a pessoa da agenda</td>
+                <td>id</td>
+                <td>boolean</td>
+            </tr>
+            <tr>
+                <td>Editar número</td>
+                <td>Editar número de telefone da pessoa</td>
+                <td>id, novo número (Number)</td>
+                <td>boolean</td>
+            </tr>
+            <tr>
+                <td>Editar endereços</td>
+                <td>Editar endereço da pessoa passada</td>
+                <td>id, novo endereço</td>
+                <td>boolean</td>
+            </tr>
+            <tr>
+                <td>Pesquisar</td>
+                <td>Procura na agenda as pessoas referentes as informações passadas</td>
+                <td>nome ou endereço</td>
+                <td>Array [id]</td>
+            </tr>
+            <tr>
+                <td>Pesquisar número</td>
+                <td>Pesquisar por número de telefone</td>
+                <td>ddd ou número</td>
+                <td>Array [id]</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="footer">
+    <h1>Verificar:</h1>
+    <u>
+        <li>Alocação dinâmica</li>
+        <li>Try / catch</li>
+    </u>
+</div>
