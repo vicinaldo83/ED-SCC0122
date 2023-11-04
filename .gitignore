@@ -2,3 +2,4 @@ output/
 .vscode/
 *.exe
 *.code-workspace
+*.o
